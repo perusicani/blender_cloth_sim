@@ -1,0 +1,23 @@
+\chapter{Programska podrška Blender}
+
+\section{Općenito o Blenderu}
+
+Programska podrška Blender (u daljnjem tekstu Blender) je besplatni program za stvaranje otvorenog koda 3D prikaza. Podržava cjelokupni 3D cjevovod (pipeline). Pod time se podrazumijeva: modeliranje, opremanje, animacija, simulacija, renderiranje, sastavljanje i praćenje pokreta. Također, pruža support za uređivanje video uradataka i stvaranje računalnih igrica uz male napore. 
+
+Blender je višeplatformska programska podrška, te podjednako radi na operacijskim sustavima Microsoft Windows, Linux i Macintosh računalima. Za grafičko sučelje koristi OpenGL kako bi iskustvo na svakoj od platformi bilo konzistentno, te se preko samoga sučelja i najčešće koristi. 
+
+Kako grafička sučelja često radi jednostavnosti korištenja i intuitivnosti sakriju pojedine funkcionalnosti, Blender omogućava upravljanje većinom svojih mogućnosti preko aplikacijskog programskog sučelja (u daljnjem tekstu API) napisanog u Python programskom jeziku.
+
+\section{Python API}
+
+Pri izradi ovoga praktičnog dijela ovoga rada, u potpunosti je korišten Python API za postavljanje, kreiranje, simuliranje fizike i renderiranje okvira animacije. To je omogućila pokrivenost funkcionalnosti sa spomenutim API-em iako je i dalje zapisan kao nedovršen od strane programera programa Blender. 
+
+Iako nedovršen, API pruža dovoljne mogućnosti za skriptiranje simulacije u ovome radu, ali i mnoštvo drugih. Primjerice: u radu je korišteno uređivanje scene, mreže koja predstavlja objekt tkanine, manipuliranje položaja čestica te renderiranje okvir-po-okvir (frame-by-frame) kako bi se dobila finalna animacija. Uz to, nekorištene opcije obuhvaćaju kreiranje vlastitih alata, korištenje alata implementiranih od strane drugih korisnika, stvaranje elemenata korisničkog sučelja, mapiranje postojećih elemenata i ostale.
+
+Što se sintakse samog API-a tiče, relativno je zbunjujuća na prvi pogled te zahtjeva korištenje i razumijevanje dokumetacije, ali uz mnoštvo korisnika Blendera, rješenja za jednostavnije upite na forumima ne manjka.
+
+\section{Korisničko sučelje Blendera}
+
+Potrebno je napomenuti i specifičnosti programa, ponajviše specifičnosti korisničkog sučelja koje obuhvaća uređivač teksta (u daljnjem tekstu editor) odnosno Python skripte, prikaz scene (još nazivan "Viewport"), Python konzolu za brzo testiranje linija koda, te desnu traku koja se sastoji od više izbornika koji prikazuju sve objekte na sceni te njihove parametre i postavke. Naravno, cijeli raspored elemenata može se prilagođavati prema korisnikovim željama i potrebama. 
+Jedina problematika na koju sam ja naišla pri korištenju korisničkog sučelja je važnost položaja pokazivača u odnosu na sve elemente sučelja. Primjerice, ako se pokazivač nalazi iznad Viewporta, editor neće dopustiti upisivanje iako je kursor vizualno u njemu i Blender prozor je označen. Kao osobi koja se rijetko koristi pokazivačem, odnosno za većinu akcija koristi samo tipkovnicu, to je često ometalo rad i prouzročilo "lomljenja" toka misli.
+
